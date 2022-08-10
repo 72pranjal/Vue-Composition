@@ -1,0 +1,24 @@
+{
+    "posts":[
+        {
+            "id":1,
+            "title": "wlcome to the new block",
+            "body": "lorem ipsum dolor sit amet consectur adpiting elit",
+            "tages":[
+                "webdev",
+                "coding",
+                "news"
+            ]
+        },
+        {
+            "id":12,
+            "title": "top 5 css tips",
+            "body": "lorem ipsum dolor sit amet consectur adpiting elit",
+            "tages":[
+                "webdev",
+                "coding",
+                "css"
+            ]
+        }
+    ]
+}

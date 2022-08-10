@@ -1,5 +1,6 @@
 <template>
   <h2>Props in compositin api</h2>
+  <h2>{{load}}</h2>
   <h2>{{bookdetails}}</h2>
   <child  :bookdetails="bookdetails"/>
 </template>
@@ -12,10 +13,25 @@ export default {
         child
     },
  setup(){
-    const bookdetails=ref([{id:1,name:'thie main concept of vue3',author:'the good boy smart bot akash'},
-   {id:2,name:'all about typescript and nuxt3 for creating a good looking webste', author:'the main in boy shival gupta'} ])
-
-   return {bookdetails}
+    const bookdetails=ref([])
+    const error =ref(null)
+    const load=async() =>{
+      try{
+        let data=await fetch('http://localhost:3000/posts')
+        console.log(data)
+        if(!data.ok){
+          throw Error('no data available')
+        }
+        bookdetails.value = await data.json()
+        console.log(data.json())
+      }
+      catch(err){
+          error.value=err.message
+          console.log(error.message)
+      }
+     
+    }
+   return {bookdetails,load}
  }
 }
 </script>

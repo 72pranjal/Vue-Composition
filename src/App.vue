@@ -10,6 +10,7 @@
   <refandReactive />
   <computed />
  <props />
+ <documents />
 </template>
 
 <script>
@@ -17,12 +18,14 @@ import { ref } from '@vue/reactivity'
 import refandReactive from './components/Ref-Reactive.vue'
 import computed from './components/Computed-property.vue'
 import props from './components/Props-composition.vue'
+import documents from './components/Document-parctice.vue'
 
 export default {
   components:{
       refandReactive,
       computed,
-      props
+      props,
+      documents
    
   },
   setup(){
