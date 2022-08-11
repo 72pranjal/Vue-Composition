@@ -11,6 +11,7 @@
   <computed />
  <props />
  <documents />
+ <watchers />
 </template>
 
 <script>
@@ -19,13 +20,15 @@ import refandReactive from './components/Ref-Reactive.vue'
 import computed from './components/Computed-property.vue'
 import props from './components/Props-composition.vue'
 import documents from './components/Document-parctice.vue'
+import watchers from './components/Watchers-com.vue'
 
 export default {
   components:{
       refandReactive,
       computed,
       props,
-      documents
+      documents,
+     watchers,
    
   },
   setup(){

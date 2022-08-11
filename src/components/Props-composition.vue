@@ -1,6 +1,6 @@
 <template>
   <h2>Props in compositin api</h2>
-  <h2>{{load}}</h2>
+ 
   <h2>{{bookdetails}}</h2>
   <child  :bookdetails="bookdetails"/>
 </template>
